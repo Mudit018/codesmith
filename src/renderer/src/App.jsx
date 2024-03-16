@@ -1,34 +1,37 @@
-import Versions from './components/Versions'
-import electronLogo from './assets/electron.svg'
+import logo from './logo.svg';
+import './App.css';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Calender from './Pages/Calender/Calender';
+import RootLayout from './layout/RootLayout/RootLayout';
+import Tasks from './Pages/Tasks/Tasks';
+import Lists from './Pages/Lists/Lists';
+import Settings from './Pages/Settings/Settings';
+import Profile from './Pages/Profile/Profile';
+import Chats from './Pages/Chats/Chats';
+import NotFound from './Pages/NotFound/NotFound';
+
 
 function App() {
-  const ipcHandle = () => window.electron.ipcRenderer.send('ping')
-
-  return (
-    <>
-      <img alt="logo" className="logo" src={electronLogo} />
-      <div className="creator">Powered by electron-vite</div>
-      <div className="text">
-        Build an Electron app with <span className="react">React</span>
-      </div>
-      <p className="tip">
-        Please try pressing <code>F12</code> to open the devTool
-      </p>
-      <div className="actions">
-        <div className="action">
-          <a href="https://electron-vite.org/" target="_blank" rel="noreferrer">
-            Documentation
-          </a>
-        </div>
-        <div className="action">
-          <a target="_blank" rel="noreferrer" onClick={ipcHandle}>
-            Send IPC
-          </a>
-        </div>
-      </div>
-      <Versions></Versions>
-    </>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path='/' element={<RootLayout />}>
+          <Route path='/' element={<Dashboard />}/>
+          <Route path='/calender' element={<Calender />}/>
+          <Route path='/profile' element={<Profile />}/>
+          <Route path='/Tasks' element={<Tasks />}/>
+          <Route path='/lists' element={<Lists />}/>
+          <Route path='/settings' element={<Settings />}/>
+          <Route path='/chats' element={<Chats />}/>
+        </Route>
+          <Route path='*' element={<NotFound />}/>
+      </Route>
+    )
   )
+  return (
+    <RouterProvider router={router}/>
+  );
 }
 
-export default App
+export default App;
