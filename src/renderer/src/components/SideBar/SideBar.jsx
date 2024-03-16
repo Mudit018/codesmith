@@ -6,19 +6,14 @@ import { faArrowLeft, faDashboard, faPager, faUser } from '@fortawesome/free-sol
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const SideBar = () => {
   const hideSidebar = () => {
-    document.getElementById('sidebar').style.cssText = `
-                transform: translateX(-100%)
-            `
+    document.getElementById('sidebar').style.cssText = `transform: translateX(full)`
   }
   return (
     <div
       id="sidebar"
-      className="bg-gray-800 h-full lg:w-1/5 fixed lg:fixed -translate-x-full lg:-translate-x-0 transition-all py-4 ease-in-out duration-500 border-r border-blue-600 z-20"
+      className="bg-gray-800 h-full lg:w-1/5 fixed lg:fixed -translate-x-full lg:-translate-x-0 transition-all py-4 ease-in-out duration-500 border-r border-black-600 z-20"
     >
-      <div className="flex items-center justify-center gap-4 mb-12 p-3">
-        <NavLink to="/" className="uppercase text-2xl min-h-14 flex items-center justify-center">
-          codeSmith
-        </NavLink>
+      <div className="flex items-center justify-center gap-4 mb-12 p-3"> codeSmith
         <FontAwesomeIcon
           icon={faArrowLeft}
           className="cursor-pointer text-gray-400 lg:hidden"
