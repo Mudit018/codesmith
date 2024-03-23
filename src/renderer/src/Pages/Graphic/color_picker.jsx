@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPenToSquare,
 } from '@fortawesome/free-solid-svg-icons'
-const Timestamp = () => {
+const ColorPicker = () => {
   return (
     <div className="w-[100%] flex flex-wrap justify-between gap-8 lg:gap-0">
-      <PageHeading>Timestamp</PageHeading>
+      <PageHeading>ColorPicker</PageHeading>
       <Card tailStyle={'w-[100%] lg:w-[65%]'}>
         <h5 className="p-3 px-6 border-b border-gray-700">Input</h5>
         <form action="" className="p-4 px-6 ">
@@ -68,4 +68,4 @@ const Timestamp = () => {
   )
 }
 
-export default Timestamp
+export default ColorPicker

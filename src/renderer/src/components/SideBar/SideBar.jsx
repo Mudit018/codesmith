@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../../assets/cover.jpg'
 import SideLink from '../SideLink/SideLink'
-import SideLinkList from '../SideLinkList/SideLinkList'
-import { faArrowLeft, faDashboard, faPager, faUser } from '@fortawesome/free-solid-svg-icons'
+// import SideLinkList from '../SideLinkList/SideLinkList'
+import { faArrowLeft, faDashboard, faClock, faHashtag, faSpellCheck, 
+  faKey, faFont, faTextHeight, faUserSecret, faEyedropper, faFileCode,
+  faKeyboard, faArrowDown91, faLaptopCode, faTerminal, faCode, faCubes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const SideBar = () => {
   const hideSidebar = () => {
@@ -28,75 +29,68 @@ const SideBar = () => {
       <div className="h-4/5 overflow-y-scroll scrollbar-hidden">
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Converters</h3>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/json-yml'} icon={faTerminal}>
             JSON <> YAML</>
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/timestamp'} icon={faClock}>
             Timestamp
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/number-base'} icon={faArrowDown91}>
             Number Base
           </SideLink>
         </div>
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Encoders and Decoders</h3>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/html'} icon={faFileCode}>
             HTML
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/url'} icon={faLaptopCode}>
             URL
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/jwt'} icon={faCode}>
             JWT
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/base64'} icon={faKeyboard}>
             Base64 Text
           </SideLink>
         </div>
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Text</h3>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/regex'} icon={faSpellCheck}>
             Regex
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/markdown-preview'} icon={faCubes}>
             Markdown Preview
           </SideLink>
-          <SideLinkList
-            icon={faPager}
-            to={'/'}
-            subLinks={['Settings', 'Chats', 'Settings', 'Chats']}
-          >
+          <SideLink to={'/case-manipulator'} icon={faTextHeight}>
             Case Manipulator
-          </SideLinkList>
+          </SideLink>
+          
         </div>
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Generators</h3>
-          {/* <SideLinkList icon={faDashboard} to={'/'} subLinks={['']}>
+          {/* <SideLinkList icon={faPager} to={'/'} subLinks={['Settings', 'Chats', 'Settings', 'Chats']}>
             Hash
           </SideLinkList> */}
-          <SideLinkList
-            icon={faPager}
-            to={'/'}
-            subLinks={['Settings', 'Chats', 'Settings', 'Chats']}
-          >
+          <SideLink to={'/hash'} icon={faHashtag}>
             Hash
-          </SideLinkList>
-          <SideLink to={'/profile'} icon={faUser}>
+          </SideLink>
+          <SideLink to={'/uuid'} icon={faCode}>
             UUID
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/random-text'} icon={faFont}>
             Random Text
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/checksum'} icon={faKey}>
             Checksum
           </SideLink>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/secret-keys'} icon={faUserSecret}>
             Secret Keys
           </SideLink>
         </div>
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Graphic</h3>
-          <SideLink to={'/profile'} icon={faUser}>
+          <SideLink to={'/color-picker'} icon={faEyedropper}>
             Color Picker
           </SideLink>
         </div>

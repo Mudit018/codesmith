@@ -1,16 +1,9 @@
-import React from 'react'
 import PageHeading from '../../components/PageHeading/PageHeading'
 import Card from '../../components/Card/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faEnvelope,
-  faPhone,
-  faUser,
   faPenToSquare,
-  faUpload
 } from '@fortawesome/free-solid-svg-icons'
-import { faAddressCard } from '@fortawesome/free-regular-svg-icons'
-import profile from '../../assets/profile-gen-bg-dark.jpg'
 const Settings = () => {
   return (
     <div className="w-[100%] flex flex-wrap justify-between gap-8 lg:gap-0">
@@ -20,8 +13,8 @@ const Settings = () => {
         <form action="" className="p-4 px-6 ">
           <div className="relative inline-flex flex-col w-[100%] mb-4">
             <textarea
-              id="bio"
-              placeholder="Bio"
+              id="Text"
+              placeholder="Text"
               className="bg-gray-700 p-3 pl-10 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere
@@ -48,8 +41,8 @@ const Settings = () => {
         <form action="" className="p-4 px-6 ">
           <div className="relative inline-flex flex-col w-[100%] mb-4">
             <textarea
-              id="bio"
-              placeholder="Bio"
+              id="Text"
+              placeholder="Text"
               className="bg-gray-700 p-3 pl-10 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere
