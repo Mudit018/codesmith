@@ -28,6 +28,12 @@ const SideBar = () => {
       </div>
       <div className="h-4/5 overflow-y-scroll scrollbar-hidden">
         <div className="px-8">
+          <h3 className="uppercase text-gray-500 px-3 mb-2">Api Testing</h3>
+          <SideLink to={'/apiTestingHttp'} icon={faUser}>
+            Http
+          </SideLink>
+        </div>
+        <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Converters</h3>
           <SideLink to={'/json-yml'} icon={faTerminal}>
             JSON <> YAML</>
