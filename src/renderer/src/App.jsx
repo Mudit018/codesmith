@@ -25,10 +25,13 @@ import SecretKeys from './Pages/Generators/secret_keys'
 import Uuid from './Pages/Generators/uuid'
 // Graphic
 import ColorPicker from './Pages/Graphic/color_picker'
-// Text 
+// Text
 import CaseManipulator from './Pages/Text/case_manipulator'
 import MarkdownPreview from './Pages/Text/markdown_preview'
 import Regex from './Pages/Text/regex'
+// Api Testing
+import Http from './Pages/Api_Testing/http'
+import './App.css'
 
 function App() {
   const router = createBrowserRouter(
@@ -53,6 +56,7 @@ function App() {
           <Route path="/markdown-preview" element={<MarkdownPreview />} />
           <Route path="/regex" element={<Regex />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/apiTestingHttp" element={<Http />} />
         </Route>
       </Route>
     )
