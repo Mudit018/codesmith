@@ -1,9 +1,25 @@
 import { NavLink } from 'react-router-dom'
 import SideLink from '../SideLink/SideLink'
 // import SideLinkList from '../SideLinkList/SideLinkList'
-import { faArrowLeft, faDashboard, faClock, faHashtag, faSpellCheck, 
-  faKey, faFont, faTextHeight, faUserSecret, faEyedropper, faFileCode,
-  faKeyboard, faArrowDown91, faLaptopCode, faTerminal, faCode, faCubes } from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowLeft,
+  faClock,
+  faHashtag,
+  faSpellCheck,
+  faKey,
+  faFont,
+  faTextHeight,
+  faUserSecret,
+  faEyedropper,
+  faFileCode,
+  faKeyboard,
+  faArrowDown91,
+  faLaptopCode,
+  faTerminal,
+  faCode,
+  faCubes,
+  faUser
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const SideBar = () => {
   const hideSidebar = () => {
@@ -71,7 +87,6 @@ const SideBar = () => {
           <SideLink to={'/case-manipulator'} icon={faTextHeight}>
             Case Manipulator
           </SideLink>
-          
         </div>
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Generators</h3>
@@ -104,6 +119,5 @@ const SideBar = () => {
     </div>
   )
 }
-
 
 export default SideBar

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
-import { convertKeyValueToObject } from '../../../../../utils/APITestingUtils/utils/helpers';
+import { convertKeyValueToObject } from '../../../../../utils/APITestingUtils/utils/Helpers';
 import UrlEditor from '../../Panes/RequestUrl/UrlEditor';
 import RequestTabGroup from '../../Tab-Groups/RequestTabGroup';
 
