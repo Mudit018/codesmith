@@ -34,7 +34,7 @@ export default function UrlEditor({
     <>
       <form className='flex'>
         <select
-          className='px-4 py-2 border rounded-md border-gray-300 hover:border-orange-500 focus:outline-none bg-gray-100'
+          className='px-4 py-2 border rounded-md border-gray-300 hover:border-blue-500 focus:outline-none bg-gray-800'
           value={reqMethod}
           onChange={(e) => setReqMethod(e.target.value)}
         >
@@ -45,12 +45,12 @@ export default function UrlEditor({
           ))}
         </select>
         <input
-          className='ml-3 w-full px-4 py-2 border rounded-md border-gray-300 hover:border-orange-500 focus:outline-orange-500'
+          className='ml-3 w-full px-4 py-2 border rounded-md border-gray-300 hover:border-blue-500 focus:outline-blue-500'
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />
         <button
-          className='ml-3 px-6 py-2 rounded-md font-semibold text-white bg-orange-500 hover:bg-orange-600'
+          className='ml-3 px-6 py-2 rounded-md font-semibold text-white bg-blue-500 hover:bg-blue-600'
           type='button'
           onClick={(e) => onInputSend(e)}
         >

@@ -39,14 +39,14 @@ export default function RequestTabGroup({
   ];
 
   return (
-    <Tabs forceRenderTabPanel selectedTabClassName="border-b-2 text-orange-600">
+    <Tabs forceRenderTabPanel selectedTabClassName="border-b-2 text-blue-600">
       <TabList className="flex mt-5 border border-gray-300 rounded-t-lg">
         {requestTabs.map((tab) => (
-          <Tab className="mr-3 py-2 px-4 border-orange-400 focus:outline-none 
-                          hover:text-orange-500 cursor-pointer" 
-              key={tab.slug}>
-                {tab.title}
-                </Tab>
+          <Tab className="mr-3 py-2 px-4 border-blue-400 focus:outline-none 
+                          hover:text-blue-500 cursor-pointer"
+            key={tab.slug}>
+            {tab.title}
+          </Tab>
         ))}
       </TabList>
 
