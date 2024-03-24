@@ -13,24 +13,24 @@ A cross-platform swiss army knife for developers.
 ### Install
 
 ```bash
-$ npm install
+$ make install
 ```
 
 ### Development
 
 ```bash
-$ npm run dev
+$ make dev
 ```
 
 ### Build
 
 ```bash
 # For windows
-$ npm run build:win
+$ make build_win
 
 # For macOS
-$ npm run build:mac
+$ make build_mac
 
 # For Linux
-$ npm run build:linux
+$ make build_linux
 ```

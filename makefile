@@ -4,7 +4,7 @@ install:
 start:
 	npm start
 
-run:
+dev:
 	npm run dev
 
 build_win:
