@@ -1,9 +1,7 @@
 import PageHeading from '../../components/PageHeading/PageHeading'
 import Card from '../../components/Card/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faPenToSquare,
-} from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 const Base64 = () => {
   return (
     <div className="w-[100%] flex flex-wrap justify-between gap-8 lg:gap-0">
