@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import PageHeading from '../../components/PageHeading/PageHeading';
+import { useState } from 'react';
 import Card from '../../components/Card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';

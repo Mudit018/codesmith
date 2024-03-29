@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PageHeading from '../../components/PageHeading/PageHeading';
 import Card from '../../components/Card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

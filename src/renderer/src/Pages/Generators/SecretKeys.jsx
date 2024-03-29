@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PageHeading from '../../components/PageHeading/PageHeading';
 import Card from '../../components/Card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
-const TokenGenerator = () => {
+const SecretKeys = () => {
   const [length, setLength] = useState(50);
   const [token, setToken] = useState('');
   const [showPrompt, setShowPrompt] = useState(false);
@@ -88,4 +88,4 @@ const TokenGenerator = () => {
   );
 };
 
-export default TokenGenerator;
+export default SecretKeys;

@@ -19,7 +19,7 @@ import EdJwt from './Pages/Encoders_Decoders/Jwt'
 import EdUrl from './Pages/Encoders_Decoders/Url'
 // Generators
 import Checksum from './Pages/Generators/Checksum'
-import Hash from './Pages/Generators/Hash'
+import HashGenerator from './Pages/Generators/Hash'
 import RandomText from './Pages/Generators/RandomText'
 import SecretKeys from './Pages/Generators/SecretKeys'
 import Uuid from './Pages/Generators/Uuid'
@@ -47,7 +47,7 @@ function App() {
           <Route path="/jwt" element={<EdJwt />} />
           <Route path="/url" element={<EdUrl />} />
           <Route path="/checksum" element={<Checksum />} />
-          <Route path="/hash" element={<Hash />} />
+          <Route path="/hash" element={<HashGenerator />} />
           <Route path="/random-text" element={<RandomText />} />
           <Route path="/secret-keys" element={<SecretKeys />} />
           <Route path="/uuid" element={<Uuid />} />
