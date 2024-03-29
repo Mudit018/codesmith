@@ -2,7 +2,7 @@ import PageHeading from '../../components/PageHeading/PageHeading'
 import Card from '../../components/Card/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-const Base64 = () => {
+const EdBase64 = () => {
   return (
     <div className="w-[100%] flex flex-wrap justify-between gap-8 lg:gap-0">
       <PageHeading>Base64</PageHeading>
@@ -66,4 +66,4 @@ const Base64 = () => {
   )
 }
 
-export default Base64
+export default EdBase64

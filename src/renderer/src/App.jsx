@@ -13,7 +13,7 @@ import JsonYml from './Pages/Converters/JsonYml'
 import NumberBase from './Pages/Converters/NumberBase'
 import Timestamp from './Pages/Converters/Timestamp'
 // Encoders and Decoders
-import Base64 from './Pages/Encoders_Decoders/Base64Text'
+import EdBase64 from './Pages/Encoders_Decoders/Base64Text'
 import EdHtml from './Pages/Encoders_Decoders/Html'
 import EdJwt from './Pages/Encoders_Decoders/Jwt'
 import EdUrl from './Pages/Encoders_Decoders/Url'
