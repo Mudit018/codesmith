@@ -42,7 +42,7 @@ function App() {
           <Route path="/json-yml" element={<JsonYml />} />
           <Route path="/number-base" element={<NumberBase />} />
           <Route path="/timestamp" element={<Timestamp />} />
-          <Route path="/base64" element={<Base64 />} />
+          <Route path="/base64" element={<EdBase64 />} />
           <Route path="/html" element={<EdHtml />} />
           <Route path="/jwt" element={<EdJwt />} />
           <Route path="/url" element={<EdUrl />} />
