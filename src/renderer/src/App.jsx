@@ -14,7 +14,7 @@ import NumberBase from './Pages/Converters/NumberBase'
 import Timestamp from './Pages/Converters/Timestamp'
 // Encoders and Decoders
 import EdBase64 from './Pages/Encoders_Decoders/Base64Text'
-import EdHtml from './Pages/Encoders_Decoders/Html'
+import HtmlEncoderDecoder from './Pages/Encoders_Decoders/Html'
 import EdJwt from './Pages/Encoders_Decoders/Jwt'
 import UrlEncoderDecoder from './Pages/Encoders_Decoders/Url'
 // Generators
@@ -43,7 +43,7 @@ function App() {
           <Route path="/number-base" element={<NumberBase />} />
           <Route path="/timestamp" element={<Timestamp />} />
           <Route path="/base64" element={<EdBase64 />} />
-          <Route path="/html" element={<EdHtml />} />
+          <Route path="/html" element={<HtmlEncoderDecoder />} />
           <Route path="/jwt" element={<EdJwt />} />
           <Route path="/url" element={<UrlEncoderDecoder />} />
           <Route path="/checksum" element={<Checksum />} />
