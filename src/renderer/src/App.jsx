@@ -16,7 +16,7 @@ import Timestamp from './Pages/Converters/Timestamp'
 import EdBase64 from './Pages/Encoders_Decoders/Base64Text'
 import EdHtml from './Pages/Encoders_Decoders/Html'
 import EdJwt from './Pages/Encoders_Decoders/Jwt'
-import EdUrl from './Pages/Encoders_Decoders/Url'
+import UrlEncoderDecoder from './Pages/Encoders_Decoders/Url'
 // Generators
 import Checksum from './Pages/Generators/Checksum'
 import HashGenerator from './Pages/Generators/Hash'
@@ -45,7 +45,7 @@ function App() {
           <Route path="/base64" element={<EdBase64 />} />
           <Route path="/html" element={<EdHtml />} />
           <Route path="/jwt" element={<EdJwt />} />
-          <Route path="/url" element={<EdUrl />} />
+          <Route path="/url" element={<UrlEncoderDecoder />} />
           <Route path="/checksum" element={<Checksum />} />
           <Route path="/hash" element={<HashGenerator />} />
           <Route path="/random-text" element={<RandomText />} />
