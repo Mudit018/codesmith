@@ -87,6 +87,9 @@ const SideBar = () => {
           <SideLink to={'/case-manipulator'} icon={faTextHeight}>
             Case Manipulator
           </SideLink>
+          <SideLink to={'/text-diff'} icon={faTextHeight}>
+            Text Difference
+          </SideLink>
         </div>
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Generators</h3>

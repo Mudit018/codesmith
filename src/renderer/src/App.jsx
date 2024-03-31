@@ -29,6 +29,7 @@ import ColorPicker from './Pages/Graphic/ColorPicker'
 import CaseManipulator from './Pages/Text/CaseManipulator'
 import MarkdownPreview from './Pages/Text/MarkdownPreview'
 import Regex from './Pages/Text/Regex'
+import TextDiff from './Pages/Text/TextDiff'
 // Api Testing
 import Http from './Pages/Api_Testing/Http'
 import './App.css'
@@ -55,6 +56,7 @@ function App() {
           <Route path="/case-manipulator" element={<CaseManipulator />} />
           <Route path="/markdown-preview" element={<MarkdownPreview />} />
           <Route path="/regex" element={<Regex />} />
+          <Route path="/text-diff" element={<TextDiff />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/apiTestingHttp" element={<Http />} />
         </Route>
