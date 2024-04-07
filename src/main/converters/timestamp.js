@@ -18,6 +18,7 @@ function isLeapYear(year) {
  * @returns {string}
  */
 function TimestampToIso(timestamp_raw) {
+  if (timestamp_raw.length === 0) return ''
   let _timestamp = parseInt(timestamp_raw, 10)
   let _time = _timestamp % 86400
   let hours = Math.floor(_time / 3600)
@@ -69,9 +70,10 @@ function TimestampToIso(timestamp_raw) {
  * Convert ISO date-time format to UNIX timestamp
  *
  * @param {string} iso - Date-time in the format 'YYYY-MM-DD HH:MM:SS'
- * @returns {number}
+ * @returns {string}
  */
 function IsoToTimestamp(iso) {
+  if (iso.length === 0) return ''
   let _parts = iso.split(' ')
   const [year, month, day] = _parts[0].split('-').map((x) => parseInt(x, 10))
   const [hours, minutes, seconds] = _parts[1].split(':').map((x) => parseInt(x, 10))
@@ -96,7 +98,7 @@ function IsoToTimestamp(iso) {
   result *= 86400
   result += hours * 3600 + minutes * 60 + seconds
 
-  return result
+  return `${result}`
 }
 
 export { TimestampToIso, IsoToTimestamp }

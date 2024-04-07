@@ -24,5 +24,5 @@ axios.interceptors.response.use(updateEndTime, (e) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+  <App />
 );

@@ -1,4 +1,4 @@
-const yaml = require('js-yaml')
+import { dump, load } from 'js-yaml'
 
 /**
  * Convert JSON to YAML
@@ -7,7 +7,13 @@ const yaml = require('js-yaml')
  * @return {string}
  */
 function jsonToYaml(jsonText) {
-  return yaml.dump(JSON.parse(jsonText))
+  let yaml
+  try {
+    yaml = dump(JSON.parse(jsonText))
+  } catch (Error) {
+    yaml = ''
+  }
+  return yaml
 }
 
 /**
@@ -17,7 +23,7 @@ function jsonToYaml(jsonText) {
  * @return {string}
  */
 function yamlToJson(yamlText) {
-  return JSON.stringify(yaml.load(yamlText), null, 2)
+  return JSON.stringify(load(yamlText), null, 2)
 }
 
 export { jsonToYaml, yamlToJson }
