@@ -10,6 +10,7 @@ import RootLayout from './layout/RootLayout/RootLayout'
 import Settings from './Pages/Settings/Settings'
 // Converters
 import JsonYml from './Pages/Converters/JsonYml'
+import YmlJson from './Pages/Converters/YmlJson'
 import NumberBase from './Pages/Converters/NumberBase'
 import Timestamp from './Pages/Converters/Timestamp'
 // Encoders and Decoders
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route path="*" element={<Dashboard />} />
           <Route path="/json-yml" element={<JsonYml />} />
+          <Route path="/yml-json" element={<YmlJson />} />
           <Route path="/number-base" element={<NumberBase />} />
           <Route path="/timestamp" element={<Timestamp />} />
           <Route path="/base64" element={<EdBase64 />} />
