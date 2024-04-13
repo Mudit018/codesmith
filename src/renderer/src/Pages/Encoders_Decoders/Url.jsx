@@ -35,7 +35,7 @@ const UrlEncoderDecoder = () => {
             <textarea
               id="Encode"
               placeholder="Text to encode"
-              className="bg-gray-700 p-3 pl-10 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
+              className="bg-gray-700 p-3 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
               value={decodedText}
               onChange={(e) => setDecodedText(e.target.value)}
             />
@@ -50,7 +50,7 @@ const UrlEncoderDecoder = () => {
             <textarea
               id="Decode"
               placeholder="Text to decode"
-              className="bg-gray-700 p-3 pl-10 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
+              className="bg-gray-700 p-3 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
               value={encodedText}
               onChange={(e) => setEncodedText(e.target.value)}
             />
