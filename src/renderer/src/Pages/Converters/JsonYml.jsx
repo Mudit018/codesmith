@@ -2,17 +2,27 @@ import PageHeading from '../../components/PageHeading/PageHeading'
 import Card from '../../components/Card/Card'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopy } from '@fortawesome/free-solid-svg-icons'
-import { jsonToYaml } from '../../../../main/converters/jsonYaml'
+import { jsonToYaml, yamlToJson } from '../../../../main/converters/jsonYaml'
 import { useEffect, useState } from 'react'
 
 const JsonYml = () => {
-  const [json, setJson] = useState('')
-  const [yaml, setYaml] = useState('')
   const [showPrompt, setShowPrompt] = useState(false)
+  const [input, setInput] = useState('')
+  const [output, setOutput] = useState('')
+  const [menuval, setMenuval] = useState('json')
 
   useEffect(() => {
-    setYaml(jsonToYaml(json))
-  }, [json])
+    setInput('')
+    setOutput('')
+  }, [menuval])
+
+  useEffect(() => {
+    if (menuval === 'json') {
+      setOutput(jsonToYaml(input))
+    } else {
+      setOutput(yamlToJson(input))
+    }
+  }, [input])
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text)
@@ -26,38 +36,49 @@ const JsonYml = () => {
     <div className="w-[100%] flex flex-wrap justify-between gap-8 lg:gap-0">
       <PageHeading>JSON to YAML</PageHeading>
       <Card tailStyle={'w-[100%] lg:w-[65%]'}>
-        <h5 className="p-3 px-6 border-b border-gray-700">JSON</h5>
+        <label>
+          Select input type:
+          <select
+            defaultValue="json"
+            value={menuval}
+            onChange={(e) => setMenuval(e.target.value)}
+            className="p-3 px-6 border-b border-gray-700"
+          >
+            <option value="json">JSON</option>
+            <option value="yaml">YAML</option>
+          </select>
+        </label>
         <form action="" className="p-4 px-6 ">
           <div className="relative inline-flex flex-col w-[100%] mb-4">
             <textarea
               id="Text"
               placeholder="Text"
               className="bg-gray-700 p-3 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
-              value={json}
-              onChange={(e) => setJson(e.target.value)}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
             />
             <FontAwesomeIcon
               icon={faCopy}
               className="absolute top-11 right-4 cursor-pointer text-gray-300"
-              onClick={() => handleCopy(json)}
+              onClick={() => handleCopy(input)}
             />
           </div>
         </form>
       </Card>
       <Card tailStyle={'w-[100%] lg:w-[33%] h-fit'}>
-        <h5 className="p-3 px-6 border-b border-gray-700">YAML</h5>
+        <h5 className="p-3 px-6 border-b border-gray-700">Output</h5>
         <form action="" className="p-4 px-6 ">
           <div className="relative inline-flex flex-col w-[100%] mb-4">
             <textarea
               id="Text"
               placeholder="Text"
               className="bg-gray-700 p-3 focus:outline-none border-transparent border focus:border-blue-600 focus:border resize-none h-48"
-              value={yaml}
+              value={output}
             />
             <FontAwesomeIcon
               icon={faCopy}
               className="absolute top-11 right-4 cursor-pointer text-gray-300"
-              onClick={() => handleCopy(yaml)}
+              onClick={() => handleCopy(output)}
             />
           </div>
         </form>
