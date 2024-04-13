@@ -21,7 +21,7 @@ function decimalToBinary(decimal) {
  * @param {string} binary
  * @returns {string}
  */
-function BinaryToDecimal(binary) {
+function binaryToDecimal(binary) {
   let result = 0
   for (let i = 0; i < binary.length; i++) {
     if (binary[i] === '1') {
@@ -95,7 +95,7 @@ function hexToDecimal(hex) {
 
 export {
   decimalToBinary,
-  BinaryToDecimal,
+  binaryToDecimal,
   decimalToOctal,
   octalToDecimal,
   decimalToHex,
