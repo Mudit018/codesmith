@@ -52,13 +52,16 @@ const SideBar = () => {
         <div className="px-8">
           <h3 className="uppercase text-gray-500 px-3 mb-2">Converters</h3>
           <SideLink to={'/json-yml'} icon={faTerminal}>
-            JSON &#60;&#62; YAML
+            JSON &#62; YAML
           </SideLink>
           <SideLink to={'/yml-json'} icon={faTerminal}>
-            YAML &#60;&#62; JSON
+            YAML &#62; JSON
           </SideLink>
-          <SideLink to={'/timestamp'} icon={faClock}>
-            Timestamp
+          <SideLink to={'/timestamp-iso'} icon={faClock}>
+            Timestamp &#62; ISO
+          </SideLink>
+          <SideLink to={'/iso-timestamp'} icon={faClock}>
+            ISO &#62; Timestamp
           </SideLink>
           <SideLink to={'/number-base'} icon={faArrowDown91}>
             Number Base

@@ -12,7 +12,8 @@ import Settings from './Pages/Settings/Settings'
 import JsonYml from './Pages/Converters/JsonYml'
 import YmlJson from './Pages/Converters/YmlJson'
 import NumberBase from './Pages/Converters/NumberBase'
-import Timestamp from './Pages/Converters/Timestamp'
+import TimestampIso from './Pages/Converters/TimestampIso'
+import IsoTimestamp from './Pages/Converters/IsoTimestamp'
 // Encoders and Decoders
 import EdBase64 from './Pages/Encoders_Decoders/Base64Text'
 import HtmlEncoderDecoder from './Pages/Encoders_Decoders/Html'
@@ -44,7 +45,8 @@ function App() {
           <Route path="/json-yml" element={<JsonYml />} />
           <Route path="/yml-json" element={<YmlJson />} />
           <Route path="/number-base" element={<NumberBase />} />
-          <Route path="/timestamp" element={<Timestamp />} />
+          <Route path="/timestamp-iso" element={<TimestampIso />} />
+          <Route path="/iso-timestamp" element={<IsoTimestamp />} />
           <Route path="/base64" element={<EdBase64 />} />
           <Route path="/html" element={<HtmlEncoderDecoder />} />
           <Route path="/jwt" element={<EdJwt />} />
